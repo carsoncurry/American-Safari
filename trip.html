@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>American Safari | Your Trip</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css" integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
+        crossorigin="" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+    <link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Basic" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+</head>
+<body>
+
+        <div class="jumbotron bg-transparent">
+        <h1 class="text-center text-light">AMERICAN SAFARI</h1>
+        <hr class="bg-light col-lg-6">
+        <h3 class="text-center text-light">See What You Can Encounter On Your Next Adventure</h3>
+    </div>
+    <div class="row">
+        <div class="card col-lg-6 col-md-6 col-sm-12">
+            <h2 class="text-center"><i class="fas fa-tree"></i> My Trip <i class="fas fa-tree"></i></h2>
+            <hr>
+            <div id="destination">
+                <form class="col-lg-6 col-md-6 col-sm-12">
+                    <div class="form-group">
+                        <label for="trip-name"><i class="fas fa-journal-whills"></i> My Trip Name</label>
+                        <input class="rounded" id="trip-name" type="text" name="trip-name" title="Name your upcoming adventure."
+                            placeholder="My First Adventure">
+                    </div>
+                    <div class="form-group">
+                        <label for="date-range"><i class="fas fa-calendar-alt"></i> When will your trip take place?</label>
+                        <input class="rounded col-lg-6 col-md-6 col-sm-12" id="calendar" type="text" name="daterange"
+                            value="" title="Set a date-range for your trip.">
+                    </div>
+                    <div class="dropright">
+                        <label for="park-dropdown"><i class="fas fa-globe-americas"></i> What is your destination?</label>
+                        <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenuButton"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Choose between 58 National Parks.">National
+                            Parks</button>
+                        <div class="dropdown-menu" data-boundary="scrollParent" aria-labelledby="dropdownMenuButton" id="park-dropdown">
+                        </div>
+                    </div>
+                    <button type="button" class="btn btn-success" title="Submit to start your adventure!" id="btn-submit">Submit</button>
+                    <button type="button" class="btn btn-success" title="Click to clear this adventure and start a new one!"
+                        id="btn-refresh">New Search</button>
+                </form>
+            </div>
+            <div id="alert-div"></div>
+
+            <div id="left-content" class="col-lg-6 col-md-6 col-sm-12">
+                <div id="mapid">
+                    <!--This is where the map goes, it can easily be moved to wherever we want it-->
+                </div>
+            </div>
+        </div>
+
+        <div class="card col-lg-6 col-md-6 col-sm-12">
+            <h2 class="text-center"><i class="fas fa-paw"></i> My Discoveries <i class="fas fa-paw"></i></h2>
+            <hr>
+            <div id="right-content" class="col-lg-6 col-md-6 col-sm-12">
+                <div id="animal-results">
+                    <ul id="animal-list" class="list-unstyled">
+                    </ul>
+                </div>
+                <div class="dropright">
+                    <label for="trips-dropdown"><i class="fas fa-trophy"></i> Click to view your previous trips!</label>
+                    <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false" title="You can view all of your previous trips here!">Previous
+                        Trips</button>
+                    <div class="dropdown-menu" data-boundary="scrollParent" aria-labelledby="dropdownMenubutton" id="trip-item"></div>
+                </div>
+            </div>
+        </div>
+
+        <script src="https://www.gstatic.com/firebasejs/5.5.2/firebase.js"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+
+        <!-- I inserted the javascript file for the maps/leaflet-->
+        <script src="https://unpkg.com/leaflet@1.3.4/dist/leaflet.js" integrity="sha512-nMMmRyTVoLYqjP9hrbed9S+FzjZHW5gY1TWCHA5ckwXZBadntCNs8kEqAWdrb9O7rxbCaA4lKTIWjDXZxflOcA=="
+            crossorigin=""></script>
+        <script type="text/javascript" src="assets/javascript/app.js"></script>
+        <!-- I inserted the javascript file for the maps/leaflet-->
+        <script src="https://unpkg.com/leaflet@1.3.4/dist/leaflet.js" integrity="sha512-nMMmRyTVoLYqjP9hrbed9S+FzjZHW5gY1TWCHA5ckwXZBadntCNs8kEqAWdrb9O7rxbCaA4lKTIWjDXZxflOcA=="
+            crossorigin=""></script>
+        <script type="text/javascript" src="assets/javascript/app.js"></script>
+
+
+</body>
+</html>

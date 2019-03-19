@@ -1,0 +1,76 @@
+.btn {
+    margin-bottom: 20px;
+    background-color: darkolivegreen;
+}
+
+body {
+    font-family: 'Basic', sans-serif;
+    font-size: 20px;
+}
+
+#calendar {
+    min-height: 100%;
+    min-width: 62%;
+    font-family: 'Basic', sans-serif;
+    font-size: 16px;
+    font-weight: lighter;
+    background-color: darkolivegreen;
+    color: white;
+}
+
+.fas {
+    color: darkolivegreen;
+}
+
+h2, h3, h4 {
+    font-family: 'Shadows Into Light', cursive;
+    font-weight: bold;
+}
+
+h1 {
+    font-family: 'Fredericka the Great', cursive;
+}
+
+h2 {
+    margin-top: 20px;
+}
+
+.card {
+    background: url("../images/newyear.png");
+}
+
+.alert {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.dropdown-menu {
+    max-height: 250%;
+    overflow: auto;
+}
+
+.thumbnail {
+    width: 65px;
+    height: 65px;
+    margin: 5px;
+    border-radius: 50%;
+    transition: transform .5s;
+}
+
+.thumbnail:hover {
+    transform: scale(2);
+}
+
+#my-video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -100;
+}
+
+#mapid { 
+    height: 280px;
+    margin-bottom: 20px;
+}
