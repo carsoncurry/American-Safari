@@ -20,12 +20,27 @@
 
 </head>
 <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand offset-1" href="index.html">American Safari</a>
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-        <div class="jumbotron bg-transparent">
+        <div class="collapse navbar-collapse offset-5" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="trip.html">Your Trips</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="jumbotron bg-transparent">
         <h1 class="text-center text-light">AMERICAN SAFARI</h1>
         <hr class="bg-light col-lg-6">
         <h3 class="text-center text-light">See What You Can Encounter On Your Next Adventure</h3>
     </div>
+
     <div class="row">
         <div class="card col-lg-6 col-md-6 col-sm-12">
             <h2 class="text-center"><i class="fas fa-tree"></i> My Trip <i class="fas fa-tree"></i></h2>
@@ -34,8 +49,7 @@
                 <form class="col-lg-6 col-md-6 col-sm-12">
                     <div class="form-group">
                         <label for="trip-name"><i class="fas fa-journal-whills"></i> My Trip Name</label>
-                        <input class="rounded" id="trip-name" type="text" name="trip-name" title="Name your upcoming adventure."
-                            placeholder="My First Adventure">
+                        <input class="rounded" id="trip-name" type="text" name="trip-name" title="Name your upcoming adventure.">
                     </div>
                     <div class="form-group">
                         <label for="date-range"><i class="fas fa-calendar-alt"></i> When will your trip take place?</label>
@@ -53,9 +67,9 @@
                     <button type="button" class="btn btn-success" title="Submit to start your adventure!" id="btn-submit">Submit</button>
                     <button type="button" class="btn btn-success" title="Click to clear this adventure and start a new one!"
                         id="btn-refresh">New Search</button>
+                    <div id="alert-div"></div>
                 </form>
             </div>
-            <div id="alert-div"></div>
 
             <div id="left-content" class="col-lg-6 col-md-6 col-sm-12">
                 <div id="mapid">

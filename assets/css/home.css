@@ -1,0 +1,45 @@
+.btn {
+    margin-bottom: 20px;
+    background-color: darkolivegreen;
+}
+
+a, a:hover {
+    color: white;
+}
+
+body {
+    font-family: 'Basic', sans-serif;
+    font-size: 20px;
+}
+
+.fas {
+    color: darkolivegreen;
+}
+
+h2, h3, h4 {
+    font-family: 'Shadows Into Light', cursive;
+    font-weight: bold;
+}
+
+h1 {
+    font-family: 'Fredericka the Great', cursive;
+}
+
+h2 {
+    margin-top: 20px;
+}
+
+.jumbotron {
+    margin-top: 250px;
+    align-items: center;
+    background: url("../images/newyear.png");
+}
+
+#my-video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -100;
+}
