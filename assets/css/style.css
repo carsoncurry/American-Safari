@@ -3,13 +3,8 @@
     background-color: darkolivegreen;
 }
 
-a {
+a, a:hover {
     color: black;
-}
-
-a:hover {
-    color: black;
-    text-decoration: none;
 }
 
 body {
@@ -21,6 +16,8 @@ body {
 #trip-name {
     background-color: darkolivegreen;
     color: white;
+    padding-left: 15px;
+    font-size: 18px;
 }
 
 #trip-name:hover {
@@ -45,12 +42,12 @@ body {
     color: darkolivegreen;
 }
 
-h2, h3, h4, nav {
+h2, h3, h4 {
     font-family: 'Shadows Into Light', cursive;
     font-weight: bold;
 }
 
-h1 {
+h1, nav {
     font-family: 'Fredericka the Great', cursive;
 }
 
@@ -89,4 +86,20 @@ h2 {
 #mapid { 
     height: 280px;
     margin-bottom: 20px;
+}
+
+footer {
+    position: relative;
+    margin-top: 15px;
+    padding-right: 25px;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    font-family: 'Shadows Into Light', cursive;
+    font-weight: bold;
+}
+
+.footer-link, .footer-link:hover {
+    color: white;
 }

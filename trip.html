@@ -20,25 +20,14 @@
 
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand offset-1" href="index.html">American Safari</a>
-        <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse offset-5" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="trip.html">Your Trips</a>
-                </li>
-            </ul>
-        </div>
+    <nav class="navbar">
+        <a class="navbar-brand" href="index.html">American Safari</a>
     </nav>
 
     <div class="jumbotron bg-transparent">
         <h1 class="text-center text-light">AMERICAN SAFARI</h1>
         <hr class="bg-light col-lg-6">
-        <h3 class="text-center text-light">See What You Can Encounter On Your Next Adventure</h3>
+        <h3 class="text-center text-light col-md-6 offset-3">Choose a destination, set your trip time and discover what creatures you'll most likely encounter on your adventure!</h3>
     </div>
 
     <div class="row">
@@ -49,7 +38,7 @@
                 <form class="col-lg-6 col-md-6 col-sm-12">
                     <div class="form-group">
                         <label for="trip-name"><i class="fas fa-journal-whills"></i> My Trip Name</label>
-                        <input class="rounded" id="trip-name" type="text" name="trip-name" title="Name your upcoming adventure.">
+                        <input class="rounded trip-name" id="trip-name" type="text" name="trip-name" title="Name your upcoming adventure.">
                     </div>
                     <div class="form-group">
                         <label for="date-range"><i class="fas fa-calendar-alt"></i> When will your trip take place?</label>
@@ -73,7 +62,6 @@
 
             <div id="left-content" class="col-lg-6 col-md-6 col-sm-12">
                 <div id="mapid">
-                    <!--This is where the map goes, it can easily be moved to wherever we want it-->
                 </div>
             </div>
         </div>
@@ -96,24 +84,28 @@
             </div>
         </div>
 
-        <script src="https://www.gstatic.com/firebasejs/5.5.2/firebase.js"></script>
-        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-            crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-            crossorigin="anonymous"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-            crossorigin="anonymous"></script>
-        <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
-        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <footer class="bg-transparent text-right text-light">
+        <h5>Copyright &copy; 2019 | <a href="https://github.com/carsoncurry/American-Safari" class="footer-link" target="_blank">GitHub Repository</a> | <a href="https://github.com/RJFreeman77/project1" class="footer-link" target="_blank">Version 1.0</a></h5>
+    </footer>
 
-        <!-- I inserted the javascript file for the maps/leaflet-->
-        <script src="https://unpkg.com/leaflet@1.3.4/dist/leaflet.js" integrity="sha512-nMMmRyTVoLYqjP9hrbed9S+FzjZHW5gY1TWCHA5ckwXZBadntCNs8kEqAWdrb9O7rxbCaA4lKTIWjDXZxflOcA=="
-            crossorigin=""></script>
-        <script type="text/javascript" src="assets/javascript/app.js"></script>
-        <!-- I inserted the javascript file for the maps/leaflet-->
-        <script src="https://unpkg.com/leaflet@1.3.4/dist/leaflet.js" integrity="sha512-nMMmRyTVoLYqjP9hrbed9S+FzjZHW5gY1TWCHA5ckwXZBadntCNs8kEqAWdrb9O7rxbCaA4lKTIWjDXZxflOcA=="
-            crossorigin=""></script>
-        <script type="text/javascript" src="assets/javascript/app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.5.2/firebase.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+
+    <!-- I inserted the javascript file for the maps/leaflet-->
+    <script src="https://unpkg.com/leaflet@1.3.4/dist/leaflet.js" integrity="sha512-nMMmRyTVoLYqjP9hrbed9S+FzjZHW5gY1TWCHA5ckwXZBadntCNs8kEqAWdrb9O7rxbCaA4lKTIWjDXZxflOcA=="
+        crossorigin=""></script>
+    <script type="text/javascript" src="assets/javascript/app.js"></script>
+    <!-- I inserted the javascript file for the maps/leaflet-->
+    <script src="https://unpkg.com/leaflet@1.3.4/dist/leaflet.js" integrity="sha512-nMMmRyTVoLYqjP9hrbed9S+FzjZHW5gY1TWCHA5ckwXZBadntCNs8kEqAWdrb9O7rxbCaA4lKTIWjDXZxflOcA=="
+        crossorigin=""></script>
+    <script type="text/javascript" src="assets/javascript/app.js"></script>
 
 
 </body>

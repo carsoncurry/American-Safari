@@ -458,5 +458,7 @@ function populateDestinations(arr) {
 }
 
 $("#btn-refresh").on("click", function() {
-    window.location.reload();
+    $("#alert-div").empty();
+    $("#mapid").empty();
+    $("#animal-list").empty();
 });
