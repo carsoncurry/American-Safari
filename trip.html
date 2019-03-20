@@ -6,6 +6,7 @@
     <title>American Safari | Your Trip</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <link rel="icon" href="assets/images/bear-36254_960_720.png">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css" integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
         crossorigin="" />
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
@@ -27,7 +28,7 @@
     <div class="jumbotron bg-transparent">
         <h1 class="text-center text-light">AMERICAN SAFARI</h1>
         <hr class="bg-light col-lg-6">
-        <h3 class="text-center text-light col-md-6 offset-3">Choose a destination, set your trip time and discover what creatures you'll most likely encounter on your adventure!</h3>
+        <h3 class="text-center text-light">Choose a destination, set your trip time and discover what creatures you'll most likely encounter on your adventure!</h3>
     </div>
 
     <div class="row">
@@ -38,24 +39,22 @@
                 <form class="col-lg-6 col-md-6 col-sm-12">
                     <div class="form-group">
                         <label for="trip-name"><i class="fas fa-journal-whills"></i> My Trip Name</label>
-                        <input class="rounded trip-name" id="trip-name" type="text" name="trip-name" title="Name your upcoming adventure.">
+                        <input class="rounded trip-name" id="trip-name" type="text" name="trip-name" title="Name your upcoming adventure." required>
                     </div>
                     <div class="form-group">
                         <label for="date-range"><i class="fas fa-calendar-alt"></i> When will your trip take place?</label>
                         <input class="rounded col-lg-6 col-md-6 col-sm-12" id="calendar" type="text" name="daterange"
-                            value="" title="Set a date-range for your trip.">
+                            value="" title="Set a date-range for your trip." required>
                     </div>
                     <div class="dropright">
                         <label for="park-dropdown"><i class="fas fa-globe-americas"></i> What is your destination?</label>
                         <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenuButton"
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Choose between 58 National Parks.">National
                             Parks</button>
-                        <div class="dropdown-menu" data-boundary="scrollParent" aria-labelledby="dropdownMenuButton" id="park-dropdown">
+                        <div class="dropdown-menu" data-boundary="scrollParent" aria-labelledby="dropdownMenuButton" id="park-dropdown" required>
                         </div>
                     </div>
                     <button type="button" class="btn btn-success" title="Submit to start your adventure!" id="btn-submit">Submit</button>
-                    <button type="button" class="btn btn-success" title="Click to clear this adventure and start a new one!"
-                        id="btn-refresh">New Search</button>
                     <div id="alert-div"></div>
                 </form>
             </div>
@@ -75,11 +74,13 @@
                     </ul>
                 </div>
                 <div class="dropright">
-                    <label for="trips-dropdown"><i class="fas fa-trophy"></i> Click to view your previous trips!</label>
+                    <label for="trips-dropdown"><i class="fas fa-trophy"></i> View Your Previous Trips</label>
                     <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
                         aria-haspopup="true" aria-expanded="false" title="You can view all of your previous trips here!">Previous
                         Trips</button>
                     <div class="dropdown-menu" data-boundary="scrollParent" aria-labelledby="dropdownMenubutton" id="trip-item"></div>
+                    <button type="button" class="btn btn-success" title="Click to clear this adventure and start a new one!"
+                    id="btn-refresh">New Search</button>
                 </div>
             </div>
         </div>
