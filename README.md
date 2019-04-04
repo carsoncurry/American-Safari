@@ -1,5 +1,7 @@
 # American Safari 1.2
 
+Link to American Safari page here: https://carsoncurry.github.io/American-Safari/index.html
+
 An update to the initial American Safari group project (link here: https://github.com/RJFreeman77/project1)
 
 Updates Include: 
@@ -27,7 +29,6 @@ All you need to access the page is the url link:
 
 https://github.com/RJFreeman77/project1
 
-![basicpage](/assets/images/refreshimage.png "Basic page image")
 Usage
 
 There are three important pieces of input. All three are required fields to process a query:
