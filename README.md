@@ -32,10 +32,11 @@ When the Submit button is pressed, the trip is saved under the entered in a save
 The page also has two other functionalities:
 
     The entire page can be cleared with a "new search" button. This does not clear the saved trips.
+    - New search is made without full-page refresh as of Version 1.2
 
     Under the "My Trips" dropdown, the results from any previous trip can be recalled, including the map display.
 
-Built With
+## Built With
 
     HTML
 
@@ -61,7 +62,7 @@ Built With
 
     Firebase
 
-Authors
+## Authors
 
     Ryan Freeman - JavaScript functionality, iNaturalist API, Firebase
 
