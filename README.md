@@ -1,6 +1,6 @@
 # American Safari 1.2
 
-Link to American Safari page here: https://carsoncurry.github.io/American-Safari/index.html
+This app was created to help with planning camping, hiking, sightseeing trips, etc. specifcally in relation to native animal species the user might see along the way. There are three input fields to help specify the query, and two main displays of information. This app also retains the ability to save queries for later reference.
 
 An update to the initial American Safari group project (link here: https://github.com/RJFreeman77/project1)
 
@@ -9,27 +9,13 @@ Updates Include:
 * Updated UI 
 * "New Search" feature corrected
 
-Original ReadMe follows - 
-American Safari: National Park Animal Index Application
-
-This app was created to help with planning camping, hiking, sightseeing trips, etc. specifcally in relation to native animal species the user might see along the way. There are three input fields to help specify the query, and two main displays of information. This app also retains the ability to save queries for later reference.
-
-Table of Contents
-
-Getting started
-
-Usage
-
-Built with
-
-Authors
-Getting Started
+## Getting Started
 
 All you need to access the page is the url link:
 
-https://github.com/RJFreeman77/project1
+https://carsoncurry.github.io/American-Safari/index.html
 
-Usage
+## Usage
 
 There are three important pieces of input. All three are required fields to process a query:
 
@@ -80,5 +66,6 @@ Authors
     Ryan Freeman - JavaScript functionality, iNaturalist API, Firebase
 
     Carson Curry - UI work (HTML, CSS(Bootstrap), daterangepicker.css)
+    - Version 1.2 Updates
 
     John Caldwell - Google Places API, CORS Anywhere API, Leaflet.js
